@@ -34,13 +34,13 @@ protected:
 	void CreateFields(const FVector& FieldLocation);   // Definition not specified in C++ but in blueprints
 
 	UPROPERTY(VisibleAnywhere, Category = "Weapon Properties")
-	UBoxComponent* WeaponBox = nullptr;
+	TObjectPtr<UBoxComponent> WeaponBox;
 
 	UPROPERTY(VisibleAnywhere)  // Typically "VisibleAnywhere" is used for USceneComponents whereas variables will have "EditAnywhere"
-	USceneComponent* BoxTraceStart = nullptr;
+	TObjectPtr<USceneComponent> BoxTraceStart;
 
 	UPROPERTY(VisibleAnywhere)
-	USceneComponent* BoxTraceEnd = nullptr;
+	TObjectPtr<USceneComponent> BoxTraceEnd;
 
 	UPROPERTY(EditAnywhere, Category = "Weapon Properties")
 	float Damage = 20.f; 

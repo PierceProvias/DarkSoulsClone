@@ -20,6 +20,10 @@ ABird::ABird()
 	Capsule->SetCapsuleRadius(12.f);
 	SetRootComponent(Capsule);
 	
+	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("Camera Boom Component"));
+	CameraBoom->SetupAttachment(Capsule);
+	CameraBoom->TargetArmLength = 300.f;
+
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera Component"));
 	Camera->SetupAttachment(CameraBoom);
 	
@@ -27,9 +31,7 @@ ABird::ABird()
 	SkeletalMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Skeletal Mesh Component"));
 	SkeletalMesh->SetupAttachment(Capsule);
 	
-	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("Camera Boom Component"));
-	CameraBoom->SetupAttachment(Capsule);
-	CameraBoom->TargetArmLength = 300.f;
+	
 
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
 }
