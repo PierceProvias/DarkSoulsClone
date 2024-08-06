@@ -24,14 +24,14 @@ public:
 private:
 
 	UPROPERTY(meta = (BindWidget))
-	UProgressBar* HealthProgressBar = nullptr;
+	TObjectPtr<UProgressBar> HealthProgressBar;
 
 	UPROPERTY(meta = (BindWidget))
-	UProgressBar* StaminaProgressBar = nullptr;
+	TObjectPtr<UProgressBar> StaminaProgressBar;
 
 	UPROPERTY(meta = (BindWidget))
-	UTextBlock* GoldCount = nullptr;
+	TObjectPtr<UTextBlock> GoldCount;
 	
 	UPROPERTY(meta = (BindWidget))
-	UTextBlock* SoulsCount = nullptr;
+	TObjectPtr<UTextBlock> SoulsCount;
 };

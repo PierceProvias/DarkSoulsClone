@@ -24,7 +24,7 @@ public:
 	ASlashCharacter* Character = nullptr;
 
 	UPROPERTY(BlueprintReadOnly, Category = "Movement")
-	UCharacterMovementComponent* CharacterMovement = nullptr;
+	TObjectPtr<UCharacterMovementComponent> CharacterMovement;
 
 	UPROPERTY(BlueprintReadOnly, Category = "Movement")
 	float GroundSpeed;

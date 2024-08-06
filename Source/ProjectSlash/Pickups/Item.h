@@ -42,12 +42,12 @@ protected:
 	virtual void OnSphereEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 	
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = "Mesh")
-	UStaticMeshComponent* Mesh = nullptr;
+	TObjectPtr<UStaticMeshComponent> Mesh;
 
 	EItemState ItemState = EItemState::EIS_Hovering;
 
 	UPROPERTY(VisibleInstanceOnly, Category = "Collision")
-	USphereComponent* SphereCollider = nullptr;
+	TObjectPtr<USphereComponent> SphereCollider;
 
 private:
 

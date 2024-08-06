@@ -94,53 +94,53 @@ private:
 	EActionState ActionState = EActionState::EAS_Unoccupied;
 
 	UPROPERTY(VisibleAnywhere)
-	UCameraComponent* Camera = nullptr;
+	TObjectPtr<UCameraComponent> Camera;
 
 	UPROPERTY(VisibleAnywhere)
-	USpringArmComponent* CameraBoom = nullptr;
+	TObjectPtr<USpringArmComponent> CameraBoom;
 
 	UPROPERTY(VisibleAnywhere, Category = "Hair")
-	UGroomComponent* Hair = nullptr;
+	TObjectPtr<UGroomComponent> Hair;
 
 	UPROPERTY(VisibleAnywhere, Category = "Hair")
-	UGroomComponent* Eyebrows = nullptr;
+	TObjectPtr<UGroomComponent> Eyebrows;
 
 	UPROPERTY(EditAnywhere, Category = "Input")
-	UInputMappingContext* EchoMappingContext = nullptr;
+	TObjectPtr<UInputMappingContext> EchoMappingContext;
 
 	UPROPERTY(EditAnywhere, Category = "Input")
-	UInputAction* MoveAction = nullptr;
+	TObjectPtr<UInputAction> MoveAction;
 
 	UPROPERTY(EditAnywhere, Category = "Input")
-	UInputAction* LookAction = nullptr;
+	TObjectPtr<UInputAction> LookAction;
 
 	UPROPERTY(EditAnywhere, Category = "Input")
-	UInputAction* JumpAction = nullptr;
+	TObjectPtr<UInputAction> JumpAction;
 
 	UPROPERTY(EditAnywhere, Category = "Input")
-	UInputAction* EKeyAction = nullptr;
+	TObjectPtr<UInputAction> EKeyAction;
 
 	UPROPERTY(EditAnywhere, Category = "Input")
-	UInputAction* AttackAction = nullptr;
+	TObjectPtr<UInputAction> AttackAction;
 
 	UPROPERTY(EditAnywhere, Category = "Input")
-	UInputAction* TauntAction = nullptr;
+	TObjectPtr<UInputAction> TauntAction;
 
 	UPROPERTY(EditAnywhere, Category = "Input")
-	UInputAction* KickAction = nullptr;
-
+	TObjectPtr<UInputAction> KickAction;
+	
 	UPROPERTY(EditAnywhere, Category = "Input")
-	UInputAction* DodgeAction = nullptr;
+	TObjectPtr<UInputAction> DodgeAction;
 
 	UPROPERTY(VisibleInstanceOnly)
-	AItem* OverlappingItem = nullptr;
+	TObjectPtr<AItem> OverlappingItem;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Montages")
-	UAnimMontage* TauntMontage = nullptr;
+	TObjectPtr<UAnimMontage> TauntMontage;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Montages")
-	UAnimMontage* EquipMontage = nullptr;
+	TObjectPtr<UAnimMontage> EquipMontage;
 
-	UPlayerOverlay* PlayerOverlay = nullptr;
+	TObjectPtr<UPlayerOverlay> PlayerOverlay;
 
 };

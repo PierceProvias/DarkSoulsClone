@@ -17,7 +17,7 @@ private:
 
 	UPROPERTY(EditDefaultsOnly, Category = "PlayerHUD")
 	TSubclassOf<UPlayerOverlay> PlayerOverlayClass;
-	UPlayerOverlay* PlayerOverlay = nullptr;
+	TObjectPtr<UPlayerOverlay> PlayerOverlay;
 
 protected:
 

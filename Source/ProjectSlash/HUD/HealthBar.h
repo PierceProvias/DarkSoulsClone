@@ -16,6 +16,6 @@ class PROJECTSLASH_API UHealthBar : public UUserWidget
 public:
 
 	UPROPERTY(meta = (BindWidget))     // Will link to the health bar in WBP_HealthBar NOTE: Name must match or link will not work
-	UProgressBar* HealthBar = nullptr;
+	TObjectPtr<UProgressBar> HealthBar;
 	
 };

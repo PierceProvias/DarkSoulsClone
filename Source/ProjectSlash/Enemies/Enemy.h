@@ -87,7 +87,7 @@ private:
 
 	// Current patrol target
 	UPROPERTY(EditInstanceOnly, Category = "AI Navigation")
-	AActor* PatrolTarget = nullptr;
+	TObjectPtr<AActor> PatrolTarget;
 
 	// List of patrol destination points
 	UPROPERTY(EditInstanceOnly, Category = "AI Navigation")

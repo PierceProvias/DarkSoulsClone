@@ -29,7 +29,7 @@ protected:
 private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
-	UGeometryCollectionComponent* GeometryCollection = nullptr;
+	TObjectPtr<UGeometryCollectionComponent> GeometryCollection;
 
 	// this is needed for the `SpawnActor` method in World. We need to specify a class for the template function (in particular a BP class and not a c++ one)... In order to do this we can use the UClass and specify it in BP_BreakableActor
 	// Below we use `TSubclassOf` wrapper to specify which class we want! This restricts it to ATreasure class or anything derived from it! More effective than UClass*
@@ -37,6 +37,6 @@ private:
 	TSubclassOf<ATreasure> TreasureClass;  
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
-	UCapsuleComponent* Capsule = nullptr;
+	TObjectPtr<UCapsuleComponent> Capsule;
 
 };

@@ -32,23 +32,23 @@ protected:
 private:
 	
 	UPROPERTY(VisibleInstanceOnly, Category = "Second Mesh")
-	UStaticMeshComponent* SecondMesh = nullptr;
+	TObjectPtr<UStaticMeshComponent> SecondMesh;
 
 	UPROPERTY(VisibleAnywhere, Category = "Weapon Properties")
-	UBoxComponent* RightWeaponBox = nullptr;
+	TObjectPtr<UBoxComponent> RightWeaponBox;
 
 	UPROPERTY(VisibleAnywhere)  // Typically "VisibleAnywhere" is used for USceneComponents whereas variables will have "EditAnywhere"
-	USceneComponent* RightBoxTraceStart = nullptr;
+	TObjectPtr<USceneComponent> RightBoxTraceStart;
 
 	UPROPERTY(VisibleAnywhere)
-	USceneComponent* RightBoxTraceEnd = nullptr;
+	TObjectPtr<USceneComponent> RightBoxTraceEnd;
 
 	UPROPERTY(VisibleAnywhere, Category = "Weapon Properties")
-	UBoxComponent* LeftWeaponBox = nullptr;
+	TObjectPtr<UBoxComponent> LeftWeaponBox;
 
 	UPROPERTY(VisibleAnywhere) 
-	USceneComponent* LeftBoxTraceStart = nullptr;
+	TObjectPtr<USceneComponent> LeftBoxTraceStart;
 
 	UPROPERTY(VisibleAnywhere)
-	USceneComponent* LeftBoxTraceEnd = nullptr;
+	TObjectPtr<USceneComponent> LeftBoxTraceEnd;
 };

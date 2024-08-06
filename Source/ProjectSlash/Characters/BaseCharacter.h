@@ -35,10 +35,10 @@ protected:
 	virtual void GetHit(const FVector& ImpactPoint, AActor* Hitter) override;
 	
 	UPROPERTY(VisibleAnywhere, Category = "Weapon")
-	AWeapon* EquippedWeapon = nullptr;
+	TObjectPtr<AWeapon> EquippedWeapon;
 
 	UPROPERTY(VisibleAnywhere, Category = "Weapon")
-	ATwoWeapons* TwoWeapons = nullptr;
+	TObjectPtr<ATwoWeapons> TwoWeapons;
 
 
 	virtual void Attack();
@@ -46,7 +46,7 @@ protected:
 	virtual void Die();
 
 	UPROPERTY(VisibleAnywhere)
-	UAttributeComponent* Attribute = nullptr;
+	TObjectPtr<UAttributeComponent> Attribute;
 
 	/**
 	* Play Montage Functions
@@ -74,7 +74,7 @@ protected:
 	void StopAttackMontage();
 
 	UPROPERTY(BlueprintReadOnly, Category = "Combat")
-	AActor* CombatTarget = nullptr;
+	TObjectPtr<AActor> CombatTarget;
 
 	UPROPERTY(EditAnywhere, Category = "Combat")
 	double WarpTargetDistance = 75.f;
@@ -92,16 +92,16 @@ private:
 
 	/** Animation Montages */
 	UPROPERTY(EditDefaultsOnly, Category = "Montages")
-	UAnimMontage* AttackMontage = nullptr;
+	TObjectPtr<UAnimMontage> AttackMontage;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Montages")
-	UAnimMontage* HitReactMontage = nullptr;
+	TObjectPtr<UAnimMontage> HitReactMontage;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Montages")
-	UAnimMontage* DeathMontage = nullptr;
+	TObjectPtr<UAnimMontage> DeathMontage;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Montages")
-	UAnimMontage* DodgeMontage = nullptr;
+	TObjectPtr<UAnimMontage> DodgeMontage;
 
 	UPROPERTY(EditAnywhere, Category = "Montages")
 	TArray<FName> AttackMontageSections;

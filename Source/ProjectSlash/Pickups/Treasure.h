@@ -18,5 +18,5 @@ protected:
 private:
 
 	UPROPERTY(EditAnywhere, Category = "Sounds")
-	USoundBase* PickupSound = nullptr;
+	TObjectPtr<USoundBase> PickupSound;
 };
